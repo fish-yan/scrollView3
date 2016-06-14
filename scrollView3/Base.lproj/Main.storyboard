@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="scrollView3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U0e-5C-wHz">
+                                <rect key="frame" x="-320" y="20" width="320" height="200"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qfg-bd-SU4" appends="YES" id="rgo-Wo-Bx8"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZA-ca-BZR">
+                                <rect key="frame" x="320" y="20" width="320" height="200"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="az4-bz-qsG" appends="YES" id="U97-EW-aRN"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iot-hk-GgJ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="iTu-qg-vbn"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HAg-hY-fM0" appends="YES" id="rvV-A3-YHX"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="height" secondItem="U0e-5C-wHz" secondAttribute="height" id="7Ot-N5-Ipl"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="centerY" secondItem="U0e-5C-wHz" secondAttribute="centerY" id="Cuj-V9-dqR"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="CvZ-kg-ruO"/>
+                            <constraint firstItem="tZA-ca-BZR" firstAttribute="width" secondItem="U0e-5C-wHz" secondAttribute="width" id="DiN-8G-1Rv"/>
+                            <constraint firstItem="tZA-ca-BZR" firstAttribute="leading" secondItem="iot-hk-GgJ" secondAttribute="trailing" id="S7Y-pv-5bv"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxX-6p-3KZ"/>
+                            <constraint firstItem="tZA-ca-BZR" firstAttribute="centerY" secondItem="U0e-5C-wHz" secondAttribute="centerY" id="c2O-ve-NlN"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="leading" secondItem="U0e-5C-wHz" secondAttribute="trailing" id="mN0-3T-VW8"/>
+                            <constraint firstItem="tZA-ca-BZR" firstAttribute="height" secondItem="U0e-5C-wHz" secondAttribute="height" id="nko-s0-Xh1"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qHb-zo-AVk"/>
+                            <constraint firstItem="iot-hk-GgJ" firstAttribute="width" secondItem="U0e-5C-wHz" secondAttribute="width" id="yCo-LI-fCX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView1" destination="U0e-5C-wHz" id="Wc5-R7-1bZ"/>
+                        <outlet property="imageView2" destination="iot-hk-GgJ" id="eEd-zS-R8q"/>
+                        <outlet property="imageView3" destination="tZA-ca-BZR" id="hY1-a8-MI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Qfg-bd-SU4">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="CLS-IC-UcY"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="HAg-hY-fM0">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="bpT-n1-x01"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="az4-bz-qsG">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="VZe-NX-qE8"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
